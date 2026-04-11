@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const worksans = localFont({
   src: [
@@ -66,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${worksans.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", worksans.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
