@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import 'easymde/dist/easymde.min.css';
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
